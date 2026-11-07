@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExpenseTrack - Smart Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Expense<span>Track</span></a>
+
+            <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#features">Features</a>
+                <a href="#about">About</a>
+                <a href="#auth">Login</a>
+                <a href="#auth" class="signup-link">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-tag">SMART MONEY MANAGEMENT</span>
+                <h1>Take Control of Your <span>Finances</span></h1>
+                <p>
+                    Track your income, manage expenses and plan your budget
+                    with one simple and powerful expense tracker.
+                </p>
+                <a href="#auth" class="primary-btn">Get Started</a>
+                <a href="#features" class="secondary-btn">Explore Features</a>
+            </div>
+
+            <div class="hero-preview">
+                <div class="preview-card">
+                    <p>Total Balance</p>
+                    <h2>₹45,850.00</h2>
+                    <div class="preview-stats">
+                        <div>
+                            <span>Income</span>
+                            <strong class="income-text">₹60,000</strong>
+                        </div>
+                        <div>
+                            <span>Expenses</span>
+                            <strong class="expense-text">₹14,150</strong>
+                        </div>
+                    </div>
+                    <div class="preview-chart">
+                        <div class="preview-bar bar-one"></div>
+                        <div class="preview-bar bar-two"></div>
+                        <div class="preview-bar bar-three"></div>
+                        <div class="preview-bar bar-four"></div>
+                        <div class="preview-bar bar-five"></div>
+                        <div class="preview-bar bar-six"></div>
+                    </div>
+                    <p class="preview-caption">Your financial overview</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="features section-padding" id="features">
+        <div class="section-heading">
+            <span>OUR FEATURES</span>
+            <h2>Everything You Need to Manage Money</h2>
+            <p>Simple tools to help you understand and control your finances.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>Income Tracking</h3>
+                <p>Keep track of all your income and monitor your earnings.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">💳</div>
+                <h3>Expense Management</h3>
+                <p>Record daily expenses and understand your spending habits.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Financial Analytics</h3>
+                <p>View charts and reports to understand your financial activity.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Budget Planning</h3>
+                <p>Set monthly budgets and monitor your spending limits.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3>Search Transactions</h3>
+                <p>Quickly find transactions using search and filter options.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Personal Dashboard</h3>
+                <p>Access your own financial dashboard after logging in.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about section-padding" id="about">
+        <div class="about-content">
+            <span>ABOUT EXPENSETRACK</span>
+            <h2>Make Better Financial Decisions</h2>
+            <p>
+                ExpenseTrack is a personal finance management application
+                designed to help users record income, track expenses,
+                monitor monthly budgets and understand their spending
+                through simple visual analytics.
+            </p>
+            <a href="#auth" class="primary-btn">Start Managing Money</a>
+        </div>
+    </section>
+
+    <!-- AUTHENTICATION SECTION -->
+    <section class="auth-section section-padding" id="auth">
+        <div class="auth-container">
+            <h2 id="formTitle">Create Your Account</h2>
+            <p id="formDescription">Join us and manage your money smarter.</p>
+
+            <!-- SIGNUP FORM -->
+            <form id="signupForm">
+                <label for="signupName">Full Name</label>
+                <input type="text" id="signupName" placeholder="Enter your full name" required>
+
+                <label for="signupEmail">Email Address</label>
+                <input type="email" id="signupEmail" placeholder="Enter your email" required>
+
+                <label for="signupPassword">Password</label>
+                <input type="password" id="signupPassword" placeholder="Create password" minlength="6" required>
+
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" placeholder="Confirm password" required>
+
+                <button type="submit" class="auth-btn">Create Account</button>
+
+                <p class="switch-text">
+                    Already have an account?
+                    <a href="#" id="showLogin">Login</a>
+                </p>
+            </form>
+
+            <!-- LOGIN FORM -->
+            <form id="loginForm" class="hidden">
+                <label for="loginEmail">Email Address</label>
+                <input type="email" id="loginEmail" placeholder="Enter your email" required>
+
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" placeholder="Enter your password" required>
+
+                <button type="submit" class="auth-btn">Login</button>
+
+                <p class="switch-text">
+                    Don't have an account?
+                    <a href="#" id="showSignup">Sign Up</a>
+                </p>
+            </form>
+
+            <p id="message" aria-live="polite"></p>
+        </div>
+    </section>
+
+    <!-- DASHBOARD SECTION -->
+    <section class="dashboard-section hidden" id="dashboard">
+
+        <!-- DASHBOARD HEADER -->
+        <div class="dashboard-header">
+            <div>
+                <p class="dashboard-label">PERSONAL FINANCE</p>
+                <h2>Welcome, <span id="userName">User</span>!</h2>
+                <p>Here is your financial overview.</p>
+            </div>
+
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </div>
+
+        <!-- SUMMARY CARDS -->
+        <div class="summary-grid">
+            <div class="summary-card balance-card">
+                <p>Total Balance</p>
+                <h2 id="totalBalance">₹0.00</h2>
+                <span>Your available balance</span>
+            </div>
+
+            <div class="summary-card income-card">
+                <p>Total Income</p>
+                <h2 id="totalIncome">₹0.00</h2>
+                <span>Money received</span>
+            </div>
+
+            <div class="summary-card expense-card">
+                <p>Total Expenses</p>
+                <h2 id="totalExpense">₹0.00</h2>
+                <span>Money spent</span>
+            </div>
+        </div>
+
+        <!-- ADD TRANSACTION -->
+        <div class="dashboard-panel">
+            <h3>Add New Transaction</h3>
+
+            <form id="transactionForm" class="transaction-form">
+
+                <div class="form-group">
+                    <label for="transactionTitle">Description</label>
+                    <input type="text" id="transactionTitle" placeholder="Example: Shopping" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="transactionAmount">Amount (₹)</label>
+                    <input type="number" id="transactionAmount" placeholder="Enter amount" min="0.01" step="0.01" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="transactionType">Transaction Type</label>
+                    <select id="transactionType" required>
+                        <option value="expense">Expense</option>
+                        <option value="income">Income</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="transactionCategory">Category</label>
+                    <select id="transactionCategory" required>
+                        <option value="Food">Food</option>
+                        <option value="Shopping">Shopping</option>
+                        <option value="Travel">Travel</option>
+                        <option value="Bills">Bills</option>
+                        <option value="Education">Education</option>
+                        <option value="Salary">Salary</option>
+                        <option value="Business">Business</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="transactionDate">Date</label>
+                    <input type="date" id="transactionDate" required>
+                </div>
+
+                <button type="submit" class="add-transaction-btn">
+                    + Add Transaction
+                </button>
+            </form>
+        </div>
+
+        <!-- TRANSACTION HISTORY -->
+        <div class="dashboard-panel">
+            <div class="history-header">
+                <h3>Transaction History</h3>
+
+                <div class="history-controls">
+                    <input type="search" id="searchTransaction" placeholder="Search transactions...">
+
+                    <select id="filterTransaction">
+                        <option value="all">All Transactions</option>
+                        <option value="income">Income</option>
+                        <option value="expense">Expenses</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table class="transaction-table">
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Category</th>
+                            <th>Date</th>
+                            <th>Type</th>
+                            <th>Amount</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="transactionList">
+                        <tr>
+                            <td colspan="6" class="empty-message">
+                                No transactions yet.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- MONTHLY SUMMARY -->
+        <div class="dashboard-panel">
+            <h3>Monthly Spending Summary</h3>
+
+            <div class="monthly-summary">
+                <div class="summary-bar">
+                    <div>
+                        <span>Income</span>
+                        <strong id="monthlyIncome">₹0.00</strong>
+                    </div>
+
+                    <div class="bar-background">
+                        <div class="income-bar" id="incomeBar"></div>
+                    </div>
+                </div>
+
+                <div class="summary-bar">
+                    <div>
+                        <span>Expenses</span>
+                        <strong id="monthlyExpense">₹0.00</strong>
+                    </div>
+
+                    <div class="bar-background">
+                        <div class="expense-bar" id="expenseBar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EXPENSE ANALYTICS -->
+        <div class="dashboard-panel analytics-panel">
+            <h3>Expense Analytics</h3>
+            <p class="analytics-description">
+                Understand your spending habits through visual reports.
+            </p>
+
+            <div class="analytics-grid">
+                <div class="chart-container">
+                    <h4>Category-wise Expenses</h4>
+                    <canvas id="categoryChart"></canvas>
+                </div>
+
+                <div class="chart-container">
+                    <h4>Income vs Expenses</h4>
+                    <canvas id="incomeExpenseChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- MONTHLY BUDGET -->
+        <div class="dashboard-panel">
+            <h3>Monthly Budget Planner</h3>
+
+            <form id="budgetForm" class="budget-form">
+                <div class="form-group">
+                    <label for="budgetAmount">Monthly Budget (₹)</label>
+                    <input type="number" id="budgetAmount" min="1" step="0.01" placeholder="Enter your monthly budget" required>
+                </div>
+
+                <button type="submit" class="add-transaction-btn">
+                    Set Budget
+                </button>
+            </form>
+
+            <div class="budget-info">
+                <div>
+                    <span>Monthly Budget</span>
+                    <strong id="budgetLimit">₹0.00</strong>
+                </div>
+
+                <div>
+                    <span>Amount Spent</span>
+                    <strong id="budgetSpent">₹0.00</strong>
+                </div>
+
+                <div>
+                    <span>Remaining Budget</span>
+                    <strong id="budgetRemaining">₹0.00</strong>
+                </div>
+            </div>
+
+            <div class="budget-progress">
+                <div id="budgetProgressBar"></div>
+            </div>
+
+            <p id="budgetMessage"></p>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <h3>ExpenseTrack</h3>
+            <p>Manage your money. Understand your spending. Plan your future.</p>
+            <p class="copyright">
+                © 2026 ExpenseTrack. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- CHART.JS LIBRARY -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
